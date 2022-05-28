@@ -1,0 +1,20 @@
+<br><br>
+<h1 style="text-align: center;">Dashboard</h1>
+<button mat-raised-button color="primary" type="button" routerLink="/addContent" style="float: right;margin-right:50px">Add Content</button>
+<br>
+<br>
+
+<mat-grid-list cols="2" rowHeight="3:1">
+<mat-grid-tile *ngFor="let c of contentData">
+    <mat-card>
+        <mat-card-title>{{c.contentTitle}}</mat-card-title>
+        <mat-card-subtitle>{{c.contentType}}</mat-card-subtitle>
+        <mat-card-content>{{c.contentDate}} <br><br> &nbsp;&nbsp;&nbsp;{{c.contentBody}}</mat-card-content>
+        <mat-card-footer>Content Id_{{c.contentId}}</mat-card-footer>
+    </mat-card>
+</mat-grid-tile>
+</mat-grid-list>
+
+<br><br><br><br>&nbsp;
+
+

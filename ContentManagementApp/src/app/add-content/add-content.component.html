@@ -1,0 +1,30 @@
+<br><h1 style="text-align: center;">Add New Content Form</h1><br>
+
+<div class="addContentForm" mat-card-content>
+    <form [formGroup]="addContentForm" (ngSubmit)="addContent()">
+        <mat-form-field appearance="standard">
+            <mat-label>Content Id</mat-label>
+            <input matInput type="text" formControlName="contentId">
+        </mat-form-field><br>
+        <mat-form-field appearance="standard">
+            <mat-label>Content title</mat-label>
+            <input matInput type="text" formControlName="contentTitle">
+        </mat-form-field><br>
+        <mat-form-field appearance="standard">
+            <mat-label>Content Type</mat-label>
+            <input matInput type="text" formControlName="contentType">
+        </mat-form-field><br>
+        <mat-form-field appearance="standard">
+            <mat-label>Content Date</mat-label>
+            <input matInput type="date" formControlName="contentDate">
+        </mat-form-field><br>
+        <mat-form-field appearance="standard">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="contentBody"></textarea>
+        </mat-form-field>
+        <button mat-raised-button [disabled]="addContentForm.invalid" color="primary" type="submit">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" type="button" routerLink="/dashboard">Get Data</button>
+
+    </form>
+
+</div>
